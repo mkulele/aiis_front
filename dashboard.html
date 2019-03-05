@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flat.min.js"></script>
+    <script src="js/graph.min.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div id="wrap">
+    <!-- 헤더 / 로고, 토글버튼-->
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">AutoInSleep</a>
+        </h1>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="index.html">공지사항</a></li>
+                <li><a href="introudce.html">F&Q</a></li>
+                <li><a href="dashboard.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+    </header>
+
+
+
+    <!--선택된 메뉴-->
+    <section class="main_section">
+         <section class="select_section">
+          <div class="select_title">대시보드</div>
+         </section>
+
+    <!--수익률&승률-->
+        <section class="percent_section">
+            <section class="virtual">
+                <div class="percent_title">가상 투자</div>
+                <div class="percent_content">
+                    수익률
+                    <div class="zt-skill-bar"><div data-width="88" style="">88<span>%</span></div></div>
+                </div>
+                <div class="percent_content">
+                    승률
+                    <div class="zt-skill-bar"><div data-width="50" style="">50<span>%</span></div></div>
+                </div>
+            </section>
+
+            <section class="real">
+                <div class="percent_title">실 투자</div>
+                <div class="percent_content">
+                    수익률
+                    <div class="zt-skill-bar"><div data-width="88" style="">88<span>%</span></div></div>
+                </div>
+                <div class="percent_content">
+                    승률
+                    <div class="zt-skill-bar"><div data-width="88" style="">88<span>%</span></div></div>
+                </div>
+            </section>
+
+            <section class="all">
+                <div class="percent_title">총 투자</div>
+                <div class="percent_content">
+                    수익률
+                    <div class="zt-skill-bar"><div data-width="10" style="">10<span>%</span></div></div>
+                </div>
+                <div class="percent_content">
+                    승률
+                    <div class="zt-skill-bar"><div data-width="20" style="">20<span>%</span></div></div>
+                </div>
+            </section>
+        </section>
+
+        <!-- 그래프 -->
+        <section class="graph_section">
+            <div class="graph_title">그래프</div>
+        </section>
+    </section>
+
+
+    <!-- 메뉴바 -->
+    <section class="menubar_section">
+        <ul class="menubar_list">
+            <li ><a href="deal.html">
+                <i class="fa fa-credit-card"></i>
+                <span class="menubar_list_item">매매</span>
+            </a></li>
+            <li><a href="chart.html">
+                <i class="fa fa-chart-line"></i>
+                <span class="menubar_list_item">차트</span>
+            </a></li>
+            <li><a href="">
+                <i class="fa fa-money-bill-wave"></i>
+                <span class="menubar_list_item">대출</span>
+            </a></li>
+            <li><a href="">
+                <i class="fa fa-wallet"></i>
+                <span class="menubar_list_item">지갑</span>
+            </a></li>
+            <li class="select_menubar"><a href="dashboard.html">
+                <i class="fa fa-columns"></i>
+                <span class="menubar_list_item">대시보드</span>
+            </a></li>
+            <li><a href="">
+                <i class="fa fa-moon"></i>
+                <span class="menubar_list_item">Sleep 목록</span>
+            </a></li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>

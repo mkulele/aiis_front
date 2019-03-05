@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/deal.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flat.min.js"></script>
+    <script type="text/javascript" src="js/more.js"></script>
+
+    <title>Chart</title>
+</head>
+<body>
+
+<div id="wrap">
+    <!-- 헤더 / 로고, 토글버튼-->
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">AutoInSleep</a>
+        </h1>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="index.html">공지사항</a></li>
+                <li><a href="introudce.html">F&Q</a></li>
+                <li><a href="dashboard.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+    </header>
+
+
+
+
+    <section class="main_section">
+    <!--선택된 메뉴-->
+         <section class="select_section">
+          <div class="select_title">매매</div>
+         </section>
+
+    <!--총 자산-->
+        <section class="mymoney_section">
+            <div class="mymoney_title">
+             내 자산
+            </div>
+            <div class="mymoney_all">
+                <label>총 자산</label>
+                <label class="mymoney_all_krw">15,000,000KRW</label>
+           </div>
+            <div id="js-load">
+                <ul class="mymoney_list">
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>1330</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>1330</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>1330</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>1333330</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 103333krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>1330</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 22210krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>10</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+                    <li class="lists__item js-load">
+                        <div class="coin_cnt">
+                            <div class="coin_cnt_nr">
+                                <span>13322220</span>
+                                <span>BTC</span>
+                            </div>
+                            <span class="coin_cnt_krw">= 10222222krw</span>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- 더보기 버튼 -->
+                <div id="js-btn-wrap" class="btn-wrap">
+                    <a href="javascript:;" class="button">
+                        더보기
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                </div>
+            </div>
+         </section>
+        <section class="transaction_section">
+            <div class="transaction_title">
+                매매이력
+            </div>
+            <div class="transaction_content">
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="buy">매수</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="sell">매도</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="buy">매수</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="sell">매도</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="buy">매수</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="sell">매도</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="buy">매수</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+                <div class="transaction_element">
+                    <div class="transaction_type">
+                        <span class="sell">매도</span>
+                    </div>
+                    <div class="transaction_detail">
+                        <span>2018.01.11<br>18,500krw</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+
+    <!-- 메뉴바 -->
+    <section class="menubar_section">
+        <ul class="menubar_list">
+            <li class="select_menubar"><a href="deal.html">
+                <i class="fas fa-credit-card"></i>
+                <span class="menubar_list_item">매매</span>
+            </a></li>
+            <li><a href="chart.html">
+                <i class="fas fa-chart-line"></i>
+                <span class="menubar_list_item">차트</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-money-bill-wave"></i>
+                <span class="menubar_list_item">대출</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-wallet"></i>
+                <span class="menubar_list_item">지갑</span>
+            </a></li>
+            <li><a href="dashboard.html">
+                <i class="fas fa-columns"></i>
+                <span class="menubar_list_item">대시보드</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-moon"></i>
+                <span class="menubar_list_item">Sleep 목록</span>
+            </a></li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
+
+

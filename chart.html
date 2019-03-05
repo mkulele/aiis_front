@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flat.min.js"></script>
+    <script src="js/graph.min.js"></script>
+
+    <title>Chart</title>
+</head>
+<body>
+
+<div id="wrap">
+    <!-- 헤더 / 로고, 토글버튼-->
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">AutoInSleep</a>
+        </h1>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="index.html">공지사항</a></li>
+                <li><a href="introudce.html">F&Q</a></li>
+                <li><a href="dashboard.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+    </header>
+
+
+
+    <!--선택된 메뉴-->
+    <section class="main_section">
+         <section class="select_section">
+          <div class="select_title">차트</div>
+         </section>
+
+    <!--옵션 선택-->
+        <section class="option_section">
+            <!-- 드롭다운 선택 메뉴 -->
+                <section class="option_select">
+                <div class="drop_select_market">
+                    <select>
+                        <option selected>빗썸</option>
+                        <option>업비트</option>
+                        <option>후오비</option>
+                    </select>
+                </div>
+                <div class="drop_select_coin">
+                    <select>
+                        <option selected>BTC</option>
+                        <option>ETC</option>
+                        <option>NEO</option>
+                    </select>
+                </div>
+                <div class="drop_select_time">
+                    <select>
+                        <option selected>KRW</option>
+                        <option>BTC</option>
+                        <option>ETC</option>
+                    </select>
+                </div>
+                    <div class="drop_select_time">
+                        <select>
+                            <option selected>5m</option>
+                            <option>1h</option>
+                            <option>2h</option>
+                        </select>
+                    </div>
+            </section>
+            <!--매매 버튼-->
+            <section class="deal_btn_section">
+                <button class="deal_btn">
+                    매매
+                </button>
+            </section>
+        </section>
+
+
+        <!-- 그래프 -->
+        <section class="graph_section">
+            <div class="graph_title">지표</div>
+            <div id="chart-container"></div>
+        </section>
+        <section class="graph_section">
+            <div class="graph_title">거래량</div>
+            <div id="chart-container_2"></div>
+        </section>
+    </section>
+
+
+    <!-- 메뉴바 -->
+    <section class="menubar_section">
+        <ul class="menubar_list">
+            <li><a href="">
+                <i class="fas fa-credit-card"></i>
+                <span class="menubar_list_item">매매</span>
+            </a></li>
+            <li class="select_menubar"><a href="">
+                <i class="fas fa-chart-line"></i>
+                <span class="menubar_list_item">차트</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-money-bill-wave"></i>
+                <span class="menubar_list_item">대출</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-wallet"></i>
+                <span class="menubar_list_item">지갑</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-columns"></i>
+                <span class="menubar_list_item">대시보드</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-moon"></i>
+                <span class="menubar_list_item">Sleep 목록</span>
+            </a></li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
+
+
+
+
+<script type="text/javascript" src="https://static.cryptowat.ch/assets/scripts/embed.bundle.js"></script>
+<script type="text/javascript">
+    var chart = new cryptowatch.Embed('bitfinex', 'btcusd', {
+        timePeriod: '1d',
+        width: 800,
+        presetColorScheme: 'delek'
+    });
+    chart.mount('#chart-container');
+</script>
+<script type="text/javascript">
+    var chart = new cryptowatch.Embed('bitfinex', 'btcusd', {
+        timePeriod: '1d',
+        width: 800,
+        presetColorScheme: 'candycane',
+    });
+    chart.mount('#chart-container_2');
+</script>
+
+
+
