@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/individual_email.css">
+    <link rel="stylesheet" type="text/css" href="css/email.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/jquery.min.js"></script>
     <script src="js/flat.min.js"></script>
@@ -21,8 +21,6 @@
         </h1>
         <nav class="nav">
             <ul class="gnb">
-                <li><a href="index.html">공지사항</a></li>
-                <li><a href="introudce.html">F&Q</a></li>
                 <li><a href="dashboard.html">로그아웃</a></li>
             </ul>
         </nav>
@@ -35,7 +33,7 @@
     <section class="main_section">
     <!--선택된 메뉴-->
          <section class="select_section">
-          <div class="select_title">전체 메일 전송<div>
+          <div class="select_title">개인 메일 전송</div>
          </section>
         <form>
         <section class="Mail_section">
@@ -49,10 +47,11 @@
     </section>
 
     <!-- 메뉴바 -->
+    <!-- 메뉴바 -->
     <section class="menubar_section">
         <ul class="menubar_list">
-            <li><a href="userlist.html">
-                <i class="fas fa-credit-card"></i>
+            <li class="select_menubar"><a href="userlist.html">
+                <i class="fas fa-list"></i>
                 <span class="menubar_list_item">회원목록</span>
             </a></li>
             <li><a href="chart.html">
@@ -63,17 +62,17 @@
                 <i class="fas fa-money-bill-wave"></i>
                 <span class="menubar_list_item">입금내역</span>
             </a></li>
-            <li class="select_menubar"><a href="">
-                <i class="fas fa-wallet"></i>
-                <span class="menubar_list_item">메일</span>
+            <li><a href="">
+                <i class="fas fa-envelope"></i>
+                <span class="menubar_list_item">전체 메일</span>
             </a></li>
             <li><a href="dashboard.html">
-                <i class="fas fa-columns"></i>
+                <i class="fas fa-user-shield"></i>
                 <span class="menubar_list_item">관리자계정</span>
             </a></li>
             <li><a href="">
-                <i class="fas fa-moon"></i>
-                <span class="menubar_list_item">게시판</span>
+                <i class="fas fa-exclamation"></i>
+                <span class="menubar_list_item">공지사항</span>
             </a></li>
         </ul>
     </section>

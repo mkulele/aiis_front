@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/userlist.css">
+    <link rel="stylesheet" type="text/css" href="css/noticelist.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/jquery.min.js"></script>
     <script src="js/flat.min.js"></script>
@@ -33,66 +33,50 @@
     <section class="main_section">
     <!--선택된 메뉴-->
          <section class="select_section">
-          <div class="select_title">회원목록</div>
+          <div class="select_title">공지사항 관리</div>
          </section>
 
-        <section class="UserList_section">
-            <div class="UserList_content_title">
-                <div class="User_Menu">
-                    <div class="User_element">
-                        <span>회원</span>
-                    </div>
-                    <div class="User_element">
-                        <span>수익률</span>
-                    </div>
-                    <div class="User_element_date">
-                        <span>최근 입금</span>
-                    </div>
-                    <div class="User_element_date">
-                        <span>최근 거래</span>
-                    </div>
-                    <div class="User_element_icon">
-                        <i class="fa fa-envelope"></i>
-                    </div>
-                </div>
+    <!--목록-->
+        <section class="box">
+            <div class="button_section">
+                <input type="submit" value="작성" class="write_button" onclick="location.href='notice_write.html'">
             </div>
-            <div class="UserList_content">
-                <div class="User_line">
-                    <div class="User_element">
-                        <span>홍길동</span>
+
+            <div class="list_wrap">
+                <div class="list_line">
+                    <div class="order_num">
+                        <span>01</span>
                     </div>
-                    <div class="User_element">
-                        <span onclick="location.href='profit_user.html'">200%</span>
-                    </div>
-                    <div class="User_element_date">
+                    <div class="upload_date">
                         <span>18.01.01</span>
                     </div>
-                    <div class="User_element_date">
-                        <span>18.02.02</span>
+                    <div class="post_title">
+                        <span>안녕하세요.안녕하세요. </span>
                     </div>
-                    <div class="User_element_icon">
-                        <i class="fa fa-envelope" onclick="location.href='email_user.html'"></i>
+                    <div class="btn_div">
+                        <input type="submit" value="수정" class="modify_button">
+                    </div>
+                    <div class="btn_div">
+                        <input type="submit" value="삭제" class="del_button">
                     </div>
                 </div>
-                <div class="User_line">
-                    <div class="User_element">
-                        <span>홍길동</span>
+                <div class="list_line">
+                    <div class="order_num">
+                        <span>02</span>
                     </div>
-                    <div class="User_element">
-                        <span onclick="location.href='profit_user.html'">200%</span>
-                    </div>
-                    <div class="User_element_date">
+                    <div class="upload_date">
                         <span>18.01.01</span>
                     </div>
-                    <div class="User_element_date">
-                        <span>18.02.02</span>
+                    <div class="post_title">
+                        <span>안녕하세요. 긴 문장 테스트 긴 문장 테스트</span>
                     </div>
-                    <div class="User_element_icon">
-                        <i class="fa fa-envelope" onclick="location.href='email_user.html'"></i>
+                    <div class="btn_div">
+                        <input type="submit" value="수정" class="modify_button">
+                    </div>
+                    <div class="btn_div">
+                        <input type="submit" value="삭제" class="del_button">
                     </div>
                 </div>
-
-
             </div>
         </section>
 
@@ -101,11 +85,11 @@
     <!-- 메뉴바 -->
     <section class="menubar_section">
         <ul class="menubar_list">
-            <li class="select_menubar"><a href="userlist.html">
+            <li><a href="userlist.html">
                 <i class="fas fa-list"></i>
                 <span class="menubar_list_item">회원목록</span>
             </a></li>
-            <li><a href="profit_all.html">
+            <li><a href="chart.html">
                 <i class="fas fa-chart-line"></i>
                 <span class="menubar_list_item">수익률</span>
             </a></li>
@@ -121,7 +105,7 @@
                 <i class="fas fa-user-shield"></i>
                 <span class="menubar_list_item">관리자계정</span>
             </a></li>
-            <li><a href="">
+            <li class="select_menubar"><a href="">
                 <i class="fas fa-exclamation"></i>
                 <span class="menubar_list_item">공지사항</span>
             </a></li>
