@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/deposit.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flat.min.js"></script>
+
+    <title>Admin</title>
+</head>
+<body>
+
+<div id="wrap">
+    <!-- 헤더 / 로고, 토글버튼-->
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">Admin</a>
+        </h1>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="dashboard.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+    </header>
+
+
+
+
+    <section class="main_section">
+    <!--선택된 메뉴-->
+         <section class="select_section">
+          <div class="select_title">개인 입금 내역</div>
+         </section>
+
+    <!--목록-->
+        <section class="box">
+            <div class="button_section">
+                <span>홍길동</span>
+            </div>
+
+            <div class="list_wrap">
+                <div class="list_line">
+                    <div class="in_out">
+                        <span>입금</span>
+                    </div>
+                    <div class="date">
+                        <span>18.01.01 09:33:34</span>
+                    </div>
+                    <div class="money">
+                        <span>2,500,000</span>
+                    </div>
+                </div>
+                <div class="list_line">
+                    <div class="in_out">
+                        <span>입금</span>
+                    </div>
+                    <div class="date">
+                        <span>18.01.01 09:33:34</span>
+                    </div>
+                    <div class="money">
+                        <span>2,500,000</span>
+                    </div>
+                </div>
+                <div class="list_line">
+                    <div class="in_out">
+                        <span>출금</span>
+                    </div>
+                    <div class="date">
+                        <span>18.01.01 09:33:34</span>
+                    </div>
+                    <div class="money">
+                        <span>2,500,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- 메뉴바 -->
+    <section class="menubar_section">
+        <ul class="menubar_list">
+            <li><a href="userlist.html">
+                <i class="fas fa-list"></i>
+                <span class="menubar_list_item">회원목록</span>
+            </a></li>
+            <li><a href="chart.html">
+                <i class="fas fa-chart-line"></i>
+                <span class="menubar_list_item">수익률</span>
+            </a></li>
+            <li class="select_menubar"><a href="deposit_all.html">
+                <i class="fas fa-money-bill-wave"></i>
+                <span class="menubar_list_item">입금내역</span>
+            </a></li>
+            <li><a href="email_all.html">
+                <i class="fas fa-envelope"></i>
+                <span class="menubar_list_item">전체 메일</span>
+            </a></li>
+            <li><a href="dashboard.html">
+                <i class="fas fa-user-shield"></i>
+                <span class="menubar_list_item">관리자계정</span>
+            </a></li>
+            <li ><a href="">
+                <i class="fas fa-exclamation"></i>
+                <span class="menubar_list_item">공지사항</span>
+            </a></li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
+
+

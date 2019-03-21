@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/userlist.css">
+    <link rel="stylesheet" type="text/css" href="css/deposit.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/jquery.min.js"></script>
     <script src="js/flat.min.js"></script>
@@ -33,66 +33,54 @@
     <section class="main_section">
     <!--선택된 메뉴-->
          <section class="select_section">
-          <div class="select_title">회원목록</div>
+          <div class="select_title">전체 입금내역</div>
          </section>
 
-        <section class="UserList_section">
-            <div class="UserList_content_title">
-                <div class="User_Menu">
-                    <div class="User_element">
-                        <span>회원</span>
+    <!--목록-->
+        <section class="box">
+            <div class="list_wrap">
+                <div class="list_line">
+                    <div class="user_name">
+                        <span>홍길동</span>
                     </div>
-                    <div class="User_element">
-                        <span>수익률</span>
+                    <div class="in_out">
+                        <span>입금</span>
                     </div>
-                    <div class="User_element_date">
-                        <span>최근 입금</span>
+                    <div class="date">
+                        <span>18.01.01 09:33:34</span>
                     </div>
-                    <div class="User_element_date">
-                        <span>최근 거래</span>
-                    </div>
-                    <div class="User_element_icon">
-                        <i class="fa fa-envelope"></i>
+                    <div class="money">
+                        <span>2,500,000</span>
                     </div>
                 </div>
-            </div>
-            <div class="UserList_content">
-                <div class="User_line">
-                    <div class="User_element">
-                        <span onclick="location.href='profile_user.html'">홍길동</span>
+                <div class="list_line">
+                    <div class="user_name">
+                        <span>김수한무</span>
                     </div>
-                    <div class="User_element">
-                        <span onclick="location.href='profit_user.html'">200%</span>
+                    <div class="in_out">
+                        <span>입금</span>
                     </div>
-                    <div class="User_element_date">
-                        <span onclick="location.href='deposit_user.html'">18.01.01</span>
+                    <div class="date">
+                        <span>18.01.01 09:33:34</span>
                     </div>
-                    <div class="User_element_date">
-                        <span onclick="location.href='deal_user.html'">18.02.02</span>
-                    </div>
-                    <div class="User_element_icon">
-                        <i class="fa fa-envelope" onclick="location.href='email_user.html'"></i>
+                    <div class="money">
+                        <span>2,500,000</span>
                     </div>
                 </div>
-                <div class="User_line">
-                    <div class="User_element">
-                        <span onclick="location.href='profile_user.html'">홍길동</span>
+                <div class="list_line">
+                    <div class="user_name">
+                        <span>아무개</span>
                     </div>
-                    <div class="User_element">
-                        <span onclick="location.href='profit_user.html'">200%</span>
+                    <div class="in_out">
+                        <span>입금</span>
                     </div>
-                    <div class="User_element_date">
-                        <span onclick="location.href='deposit_user.html'">18.01.01</span>
+                    <div class="date">
+                        <span>18.01.01 09:33:34</span>
                     </div>
-                    <div class="User_element_date">
-                        <span onclick="location.href='deal_user.html'">18.02.02</span>
-                    </div>
-                    <div class="User_element_icon">
-                        <i class="fa fa-envelope" onclick="location.href='email_user.html'"></i>
+                    <div class="money">
+                        <span>2,500,000</span>
                     </div>
                 </div>
-
-
             </div>
         </section>
 
@@ -101,15 +89,15 @@
     <!-- 메뉴바 -->
     <section class="menubar_section">
         <ul class="menubar_list">
-            <li class="select_menubar"><a href="userlist.html">
+            <li><a href="userlist.html">
                 <i class="fas fa-list"></i>
                 <span class="menubar_list_item">회원목록</span>
             </a></li>
-            <li><a href="profit_all.html">
+            <li><a href="chart.html">
                 <i class="fas fa-chart-line"></i>
                 <span class="menubar_list_item">수익률</span>
             </a></li>
-            <li><a href="deposit_all.html">
+            <li class="select_menubar"><a href="deposit_all.html">
                 <i class="fas fa-money-bill-wave"></i>
                 <span class="menubar_list_item">입금내역</span>
             </a></li>
