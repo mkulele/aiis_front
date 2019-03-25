@@ -134,8 +134,8 @@ form{
     width: 98%;
     margin: 1%;
     background: #4b515f;
-    max-height: 600px;
-    min-height: 37.5rem;
+    min-height: 800px;
+    min-height: 50rem;
     padding: 5%;
 }
 .Mail_title{

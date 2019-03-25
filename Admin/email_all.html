@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/email.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="ckeditor/ckeditor.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/flat.min.js"></script>
 
@@ -35,12 +36,15 @@
          <section class="select_section">
           <div class="select_title">전체 메일 전송</div>
          </section>
-        <form>
+        <form class="email_form" id="email_form">
         <section class="Mail_section">
                 <span class="Mail_title">제목</span>
                 <input type="text" class="Mail_title_input">
                 <span class="Mail_title">내용</span>
-                <textarea class="Mail_content_input"></textarea>
+            <!--ckeditor-->
+                <textarea id="editor" name="editor"></textarea>
+                <input type="hidden" class="content" value="">
+
                 <input type="submit" value="전송" class="Mail_submit">
         </section>
         </form>
@@ -76,6 +80,20 @@
         </ul>
     </section>
 </div>
+
+
+<script>
+    $(document).ready(function(){
+        CKEDITOR.replace( 'editor' );
+    });
+
+    $('.email_form').submit(function(){
+        var content = CKEDITOR.instances.editor.getData();
+        $('.content').attr('value',content);
+        /*알러트 지우기!*/
+        alert(content);
+    });
+</script>
 
 </body>
 </html>
