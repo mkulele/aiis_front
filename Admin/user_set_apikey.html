@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/email.css">
+    <link rel="stylesheet" type="text/css" href="css/set.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/jquery.min.js"></script>
     <script src="js/flat.min.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
 
     <title>Admin</title>
 </head>
@@ -29,28 +28,25 @@
     </header>
 
 
-
-
     <section class="main_section">
-    <!--선택된 메뉴-->
-         <section class="select_section">
-          <div class="select_title">개인 메일 전송</div>
-         </section>
-        <form class="email_form" id="email_form">
-            <section class="Mail_section">
-                <span class="Mail_title">제목</span>
-                <input type="text" class="Mail_title_input">
-                <span class="Mail_title">내용</span>
-                <!--ckeditor-->
-                <textarea id="editor" name="editor"></textarea>
-                <input type="hidden" class="content" value="">
+        <section class="select_section">
+            <div class="select_title">KEY 등록</div>
+        </section>
 
-                <input type="submit" value="전송" class="Mail_submit">
-            </section>
-        </form>
+        <section class="key_section">
+            <div class="key_title">APIKEY 등록</div>
+            <div class="key_reg">
+                <form class="key_reg_form">
+                    <input type="text" class="key_input_box" placeholder="Access Key">
+                    <input type="password" class="key_input_box" placeholder="Secret Key">
+                    <button class="key_submit" type="submit"> 저장 </button>
+                </form>
+            </div>
+        </section>
     </section>
 
-    <!-- 메뉴바 -->
+
+
     <!-- 메뉴바 -->
     <section class="menubar_section">
         <ul class="menubar_list">
@@ -81,20 +77,6 @@
         </ul>
     </section>
 </div>
-
-<script>
-    $(document).ready(function(){
-        CKEDITOR.config.height = 200;
-        CKEDITOR.replace( 'editor' );
-    });
-
-    $('.email_form').submit(function(){
-        var content = CKEDITOR.instances.editor.getData();
-        $('.content').attr('value',content);
-        /*알러트 지우기!*/
-        alert(content);
-    });
-</script>
 
 </body>
 </html>

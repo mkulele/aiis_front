@@ -152,13 +152,13 @@ body{
 }
 
 .person_title{
-    min-height: 25px;
-    font-weight: bold;
-    padding: 10px;
-    padding: 0.625rem;
-    background: #2d333d;
-    border-bottom: #04aacc solid 3px;
-}
+     min-height: 25px;
+     font-weight: bold;
+     padding: 10px;
+     padding: 0.625rem;
+     background: #2d333d;
+     border-bottom: #04aacc solid 3px;
+ }
 
 .key_title{
     min-height: 25px;
@@ -174,8 +174,8 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size:0.800em;
-    font-size:0.800rem;
+    font-size:0.900em;
+    font-size:0.900rem;
 
 }
 
@@ -184,7 +184,7 @@ body{
     flex-direction: column;
     width: 98%;
     margin:1%;
-    padding: 0.5%;
+    padding: 1%;
 }
 .key_market{
     font-weight: bolder;
@@ -208,6 +208,35 @@ body{
 }
 
 
+.key_reg_form{
+    display: flex;
+    flex-flow: column;
+    width: 98%;
+    margin: 1%;
+    align-items: center;
+}
+
+.key_reg_form input{
+    width: 80%;
+    font-size:1.000em;
+    font-size:1.000rem;
+    height: 10%;
+    padding: 15px;
+    font-weight: lighter;
+}
+
+.key_submit{
+    width: 50%;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    border:0;
+    font-weight: lighter;
+    border-radius: 5px;
+    font-size:0.900em;
+    font-size:0.900rem;
+}
 
 .person_detail{
     display: flex;
@@ -240,8 +269,8 @@ body{
     width: 100%;
 }
 .person_dive_left label, .person_dive_right label{
-    display:inline-block;
-}
+     display:inline-block;
+ }
 .person_dive_left label, .person_dive_right label {
     width: 30%;
     height: 25px;
@@ -339,7 +368,7 @@ input::-moz-placeholder { color: rgba(255,255,255,.2); font-weight: lighter;}
 
 
 .select_menubar{
-    background: #4b515f;
+      background: #4b515f;
 }
 .select_menubar i{
     color:#04aacc;
@@ -370,13 +399,13 @@ input::-moz-placeholder { color: rgba(255,255,255,.2); font-weight: lighter;}
 }
 
 .ver_box_text, .ver_box_btn, .alert{
-    width: 100%;
+     width: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
     padding: 5px;
     padding: 0.3125rem;
-}
+ }
 
 .ver_box input{
     padding: 0;
@@ -560,14 +589,12 @@ input::-moz-placeholder { color: rgba(255,255,255,.2); font-weight: lighter;}
     .Key{
         margin-left: 5px;
     }
-
-
-    .key_submit {
+    .key_reg_form input {
         width: 30%;
     }
 
-    .key_input_box{
-        width: 25%;
+    .key_submit {
+        width: 30%;
     }
 
 
