@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/jquery.min.js"></script>
     <script src="js/flat.min.js"></script>
-    <script type="text/javascript" src="js/popup.js"></script>
-    <title>Set</title>
+
+    <title>Admin</title>
 </head>
 <body>
 
@@ -28,57 +28,152 @@
     </header>
 
 
-
-    <!--선택된 메뉴-->
     <section class="main_section">
         <section class="select_section">
-            <div class="select_title">사용자 정보</div>
+            <div class="select_title">회원 목록</div>
         </section>
 
 
         <section class="person_section">
             <div class="person_title">사용자 정보</div>
             <form action="" method="">
-             <div class="person_detail">
-                <div class="person_dive_left">
-                    <div class="person_dive_left_div">
-                        <label for="email">이메일</label>
-                        <input class="input_box" type="email" id="email" readonly>
+                <div class="person_detail">
+                    <div class="person_dive_left">
+                        <div class="person_dive_left_div">
+                            <label for="email">이메일</label>
+                            <input class="input_box" type="email" id="email">
+                        </div>
+                        <div class="person_dive_left_div">
+                            <label for="name">이름</label>
+                            <input class="input_box" type="text" id="name">
+                        </div>
+                        <div class="person_dive_left_div">
+                            <label for="p_number">폰번호</label>
+                            <input class="input_box" type="tel" id="p_number">
+                        </div>
                     </div>
-                    <div class="person_dive_left_div">
-                        <label for="name">이름</label>
-                        <input class="input_box" type="text" id="name" readonly>
+                    <div class="person_dive_right">
+                        <div class="person_dive_left_div">
+                            <label for="psword">비밀번호</label>
+                            <input class="input_box" type="password" id="psword">
+                        </div>
+                        <div class="person_dive_left_div">
+                            <label for="psword">비밀번호 확인</label>
+                            <input class="input_box" type="password" id="psword_confirm">
+                        </div>
+                        <div class="person_dive_left_div">
+                            <label class="checks">텔레그램</label>
+                            <input type="radio" name="telegram_alarm" value="yes">설정
+                            <input type="radio" name="telegram_alarm" value="yes">해제
+                        </div>
+                        <div class="person_dive_left_div">
+                            <label class="checks">LINE</label>
+                            <input type="radio" name="line_alarm" value="yes">설정
+                            <input type="radio" name="line_alarm" value="yes">해제
+                        </div>
                     </div>
-                    <div class="person_dive_left_div">
-                        <label for="p_number">폰번호</label>
-                        <input class="input_box" type="tel" id="p_number" readonly>
+                    <div class="submit_btn">
+                        <input type="submit" value="수정" onclick="">
                     </div>
                 </div>
-                <div class="person_dive_right">
-                    <div class="person_dive_left_div">
-                        <label for="psword">비밀번호</label>
-                        <input class="input_box" type="password" id="psword" readonly>
-                    </div>
-                    <div class="person_dive_left_div">
-                        <label class="checks">텔레그램</label>
-                        <input type="radio" name="telegram_alarm" value="yes">설정
-                        <input type="radio" name="telegram_alarm" value="no" checked="checked">해제
-                    </div>
-                    <div class="person_dive_left_div">
-                        <label class="checks">LINE</label>
-                        <input type="radio" name="line_alarm" value="yes" checked="checked">설정
-                        <input type="radio" name="line_alarm" value="no">해제
-
-                    </div>
-                </div>
-             </div>
             </form>
         </section>
         <section class="key_section">
             <div class="key_title">KEY 설정</div>
+            <div class="key_list">
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        빗썸
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        코인원
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        업비트
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        후오비
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        바이낸스
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        플로닉스
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        오케이ex
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        비트맥
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+                <div class="key_content">
+                    <div class="key_market">
+                        <i class="fas fa-cog" onclick="location.href='user_set_apikey.html'"></i>
+                        디지피닉스
+                    </div>
+                    <span class="Key">Access Key</span>
+                    <input class="key_input_box" type="text" readonly>
+                    <span class="Key">Secret Key</span>
+                    <input class="key_input_box" type="password" readonly>
+                </div>
+            </div>
         </section>
     </section>
-
 
 
 
@@ -113,12 +208,7 @@
     </section>
 </div>
 
-<!-- 레이어 팝업 콘텐츠는 바디 엔드 태그 바로 위에 위치시키는 것이 좋습니다. --> <div class="pop-wrap" id="layer01" style="display:none"> <dl> <dt class="pop-header">로그인 <a href="#none" class="btnp-close">팝업창 닫힘</a></dt> <dd class="pop-box"> <div class="pop-cont"> <div class="pop-msg"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p> <p>Lorem ipsum dolor sit amet, ipisicing.</p> <p>Lorem ipsu consectetur adipisicing.</p> </div> </div> <div class="pop-noti"> <div><input type="checkbox" name="" id="daychk01" /> <label for="daychk01">1주일간 보지 않기</label></div> </div> </dd> </dl> </div>
-
 </body>
 </html>
-
-
-
 
 
