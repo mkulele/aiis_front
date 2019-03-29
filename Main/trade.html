@@ -34,7 +34,7 @@
     <!--선택된 메뉴-->
     <section class="main_section">
         <section class="select_section">
-            <div class="select_title">매매</div>
+            <div class="select_title">매</div>
         </section>
 
         <!--계정선택-->
@@ -69,19 +69,27 @@
 
             <!--매수 옵션-->
             <section class="buy_option_section">
-                <div class="buy_option_div">
-                    <span>가격</span>
-                    <input type="number" value="price">
+                <div class="sell_two_group">
+                    <div class="sell_option_div">
+                        <span>가격</span>
+                        <input type="number" id="buy_price">
+                    </div>
+                    <div class="sell_option_div">
+                        <span>개수</span>
+                        <input type="number" id="buy_much">
+                    </div>
                 </div>
-                <div class="buy_option_div">
-                    <span>마진</span>
-                    <input type="number" value="price">
-                    <span>%</span>
-                </div>
-                <div class="buy_option_div">
-                    <span>Stop Loss</span>
-                    <input type="number" value="stoploss">
-                    <span>%</span>
+                <div class="sell_two_group">
+                    <div class="sell_option_div">
+                        <span>StopLoss</span>
+                        <input type="number" id="buy_stoploss">
+                        <span>%</span>
+                    </div>
+                    <div class="sell_option_div">
+                        <span>마진</span>
+                        <input type="number" id="buy_margin">
+                        <span>%</span>
+                    </div>
                 </div>
             </section>
 
@@ -97,23 +105,29 @@
                 <div class="sell_two_group">
                     <div class="sell_option_div">
                         <span>가격</span>
-                        <input type="number" value="price">
+                        <input type="number" id="price">
                     </div>
                     <div class="sell_option_div">
+                        <span>개수</span>
+                        <input type="number" id="much">
+                    </div>
+                </div>
+                <div class="sell_two_group">
+                    <div class="sell_option_div">
                         <span>Trailing Stop</span>
-                        <input type="number" value="price">
+                        <input type="number" id="trailing stop">
+                        <span>%</span>
+                    </div>
+                    <div class="sell_option_div">
+                        <span>마진</span>
+                        <input type="number" id="margin">
                         <span>%</span>
                     </div>
                 </div>
                 <div class="sell_two_group">
                     <div class="sell_option_div">
-                        <span>마진</span>
-                        <input type="number" value="stoploss">
-                        <span>%</span>
-                    </div>
-                    <div class="sell_option_div">
                         <span>Stop Loss</span>
-                        <input type="number" value="stoploss">
+                        <input type="number" id="stoploss">
                         <span>%</span>
                     </div>
                 </div>

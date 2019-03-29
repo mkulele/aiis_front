@@ -377,70 +377,7 @@ input:-webkit-autofill:active {
 }
 
 
-.ver_box{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    order: 3;
-    width: 98%;
-    margin: 1%;
-    background: #2d333d;
-    min-height: 200px;
-    min-height: 12.5rem;
-    max-height: 200px;
-    max-height: 12.5rem;
-    box-shadow: 1px 1px 7px 1px rgba(163, 174, 184, 0.1);
-}
 
-.ver_box .login{
-    width: 80%;
-    min-height: 200px;
-    min-height: 12.5rem;
-    max-height: 200px;
-    max-height: 12.5rem;
-}
-
-.ver_box_text, .ver_box_btn, .alert{
-     width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding: 5px;
-    padding: 0.3125rem;
- }
-
-.ver_box input{
-    padding: 0;
-    border: 0;
-    background:rgba(255,255,255,0.9);
-    min-height: 40px;
-    min-height: 2.5rem;
-    color:#04aacc;
-    margin-top: 20px;
-    margin-top: 1.25rem;
-    width: 80%;
-}
-
-.ver_box input::placeholder{
-    color:gray;
-}
-
-.ver_box button{
-    margin-top: 5px;
-    margin-top: 0.3125rem;
-    width: 80%;
-    background: #04aacc;
-    border: 0;
-    min-height: 40px;
-    min-height: 2.5rem;
-}
-
-.ver_box .alert{
-    font-size:0.700em;
-    font-size:0.700rem;
-    color:white;
-    font-weight: lighter;
-}
 
 
 
@@ -530,9 +467,7 @@ input:-webkit-autofill:active {
         line-height: 2.8125rem;
     }
 
-    .buy_option_section{
-        flex-flow: row;
-    }
+
 
     .sell_option_section{
         flex-flow: column;
