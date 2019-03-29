@@ -274,11 +274,12 @@ input:-webkit-autofill:active {
 }
 
 .sell_section span{
-    min-width: 20%;
     margin: 1%;
     padding-left: 5%;
     padding-right: 5%;
     background:#00aecf;
+    font-size:0.900em;
+    font-size:0.900rem;
 }
 
 .sell_option_section{
