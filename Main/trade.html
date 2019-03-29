@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/trade.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flat.min.js"></script>
+
+    <title>Set</title>
+</head>
+<body>
+
+<div id="wrap">
+    <!-- 헤더 / 로고, 토글버튼-->
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">AutoInSleep</a>
+        </h1>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="index.html">공지사항</a></li>
+                <li><a href="introudce.html">F&Q</a></li>
+                <li><a href="dashboard.html">로그아웃</a></li>
+            </ul>
+        </nav>
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+    </header>
+
+
+
+    <!--선택된 메뉴-->
+    <section class="main_section">
+        <section class="select_section">
+            <div class="select_title">설정</div>
+        </section>
+
+        <!--계정선택-->
+        <section class="account_section">
+            <select name="account" >
+                <option value="" selected disabled hidden>거래소 선택</option>
+                <option value="bithum">빗썸</option>
+                <option value="huobi">후오비</option>
+            </select>
+            <input type="text" id="apikey" placeholder="APIKEY" />
+            <input type="text" id="secretkey" placeholder="SECRETKEY" />
+        </section>
+
+
+        <section class="trade_section">
+
+            <!--코인 선택-->
+            <section class="coin_select_section">
+                <span>코인</span>
+                <select name="coin_select">
+                    <option value="btc" selected>btc</option>
+                    <option value="etc">etc</option>
+                    <option value="abc">abc</option>
+                </select>
+            </section>
+
+            <!--매수-->
+            <section class="buy_section">
+                <span>매수</span>
+                <input type="checkbox" class="only_check" value="only_buy">매수만
+            </section>
+
+            <!--매수 옵션-->
+            <section class="buy_option_section">
+                <div class="buy_option_div">
+                    <span>가격</span>
+                    <input type="number" value="price">
+                </div>
+                <div class="buy_option_div">
+                    <span>마진</span>
+                    <input type="number" value="price">
+                    <span>%</span>
+                </div>
+                <div class="buy_option_div">
+                    <span>Stop Loss</span>
+                    <input type="number" value="stoploss">
+                    <span>%</span>
+                </div>
+            </section>
+
+
+            <!--매도 옵션-->
+            <section class="sell_section">
+                <span>매도</span>
+                <input type="checkbox" class="only_check" value="only_sell">매도만
+            </section>
+
+            <!--매도 옵션-->
+            <section class="sell_option_section">
+                <div class="sell_two_group">
+                    <div class="sell_option_div">
+                        <span>가격</span>
+                        <input type="number" value="price">
+                    </div>
+                    <div class="sell_option_div">
+                        <span>Trailing Stop</span>
+                        <input type="number" value="price">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="sell_two_group">
+                    <div class="sell_option_div">
+                        <span>마진</span>
+                        <input type="number" value="stoploss">
+                        <span>%</span>
+                    </div>
+                    <div class="sell_option_div">
+                        <span>Stop Loss</span>
+                        <input type="number" value="stoploss">
+                        <span>%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="choose_section">
+                <input type="checkbox" class="only_check" value="real">실거래
+                <input type="checkbox" class="only_check" value="alarm">알림받기
+            </section>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- 메뉴바 -->
+    <section class="menubar_section">
+        <ul class="menubar_list">
+            <li><a href="">
+                <i class="fas fa-credit-card"></i>
+                <span class="menubar_list_item">매매</span>
+            </a></li>
+            <li><a href="chart.html">
+                <i class="fas fa-chart-line"></i>
+                <span class="menubar_list_item">차트</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-money-bill-wave"></i>
+                <span class="menubar_list_item">대출</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-wallet"></i>
+                <span class="menubar_list_item">지갑</span>
+            </a></li>
+            <li><a href="dashboard.html">
+                <i class="fas fa-columns"></i>
+                <span class="menubar_list_item">대시보드</span>
+            </a></li>
+            <li><a href="">
+                <i class="fas fa-moon"></i>
+                <span class="menubar_list_item">Sleep 목록</span>
+            </a></li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
+
+
+
+
+
