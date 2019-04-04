@@ -182,153 +182,40 @@ input:-webkit-autofill:active {
 .trade_section{
     display: flex;
     flex-flow: column nowrap;
-    align-content: space-around;
     order: 3;
     width: 98%;
     margin: 1%;
-    background: #4b515f;
     min-height: 200px;
     min-height: 12.5rem;
-    box-shadow: 1px 1px 7px 1px rgba(163, 174, 184, 0.1);
 }
 
-.coin_select_section span{
-    width: 10%;
-    margin: 1%;
-}
-
-.coin_select_section select {
-    margin: 1%;
-    padding: 0.5%;
-    width: 50%;
-    border: 0;
-    box-shadow: none;
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: lighter;
-    font-size:0.900em;
-    font-size:0.900rem;
-    color:white;
-    background: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-}
-
-.coin_select_section{
+.sleep_list_section{
     order: 1;
-    width: 98%;
-    margin: 1%;
-    margin-top: 2%;
-}
-
-.buy_section{
-    order: 2;
-    width: 98%;
-    margin: 1%;
-    margin-top: 2%;
-}
-
-.buy_section span{
-    min-width: 20%;
-    margin: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    background:#00aecf;
-}
-
-.buy_option_section{
-    order: 3;
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
-    display: flex;
-    flex-flow: column;
-}
-
-.buy_option_div{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    width: 98%;
-    margin-top: 0.5%;
-    font-size:0.900em;
-    font-size:0.900rem;
- }
-
-.buy_option_div span, .buy_option_div input{
-    margin: 1%;
-}
-
-.buy_option_div input{
-    border: 0;
-    padding: 1%;
-    color: white;
-    background: rgba(255,255,255,0.3);
-    width: 50%;
-}
-
-.sell_section{
-    order: 4;
-    width: 98%;
-    margin: 1%;
-    margin-top: 5%;
-}
-
-.sell_section span{
-    margin: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-    background:#00aecf;
-    font-size:0.900em;
-    font-size:0.900rem;
-}
-
-.sell_option_section{
-    order: 5;
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
-    display: flex;
-    flex-flow: column;
-}
-
-.sell_option_div{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    width: 98%;
-    margin-top: 0.5%;
-    font-size:0.900em;
-    font-size:0.900rem;
-}
-
-.sell_option_div span, .sell_option_div input{
-    margin: 1%;
-}
-
-.sell_option_div input{
-    border: 0;
-    padding: 1%;
-    color: white;
-    background: rgba(255,255,255,0.3);
-}
-
-.sell_two_group{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
     width: 100%;
+    background: #4b515f;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    overflow: scroll;
+    font-weight: lighter;
 }
 
-.choose_section{
-    order: 6;
-    width: 98%;
-    margin: 1%;
-    margin-top: 5%;
+.sleep_list_plus{
+    order: 1;
+    padding: 2%;
+    background: #2d333d;
 }
-
-.only_check{
-    font-size:0.800em;
-    font-size:0.800rem;
+.sleep_list_content{
+    padding: 2%;
+}
+.sleep_list_content_selected{
+    padding: 2%;
+    background: #2c3e50;
+}
+.option_list_section{
+    order: 2;
+    width: 100%;
+    background: #2c3e50;
 }
 
 
@@ -469,21 +356,33 @@ input:-webkit-autofill:active {
     }
 
 
-
-    .sell_option_section{
+    .trade_section{
+        flex-flow: row;
+    }
+    .sleep_list_section{
+        width: calc(100% - 85%);
         flex-flow: column;
     }
-
-    .buy_option_div{
-        width: 33%;
+    .sleep_list_plus{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
+    }
+    .sleep_list_content{
+        padding: 5%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .sleep_list_content_selected{
+        padding: 5%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .option_list_section{
+        width: calc(100% - 16%);
     }
 
-    .sell_option_div{
-        width: 50%;
-    }
-    .sell_two_group{
-        width: 100%;
-    }
+
 
 
 

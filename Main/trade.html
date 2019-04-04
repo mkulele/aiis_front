@@ -34,7 +34,7 @@
     <!--선택된 메뉴-->
     <section class="main_section">
         <section class="select_section">
-            <div class="select_title">매</div>
+            <div class="select_title">거래</div>
         </section>
 
         <!--계정선택-->
@@ -49,98 +49,40 @@
         </section>
 
 
+
+
         <section class="trade_section">
-
-            <!--코인 선택-->
-            <section class="coin_select_section">
-                <span>코인</span>
-                <select name="coin_select">
-                    <option value="btc" selected>btc</option>
-                    <option value="etc">etc</option>
-                    <option value="abc">abc</option>
-                </select>
-            </section>
-
-            <!--매수-->
-            <section class="buy_section">
-                <span>매수</span>
-                <input type="checkbox" class="only_check" value="only_buy">매수만
-            </section>
-
-            <!--매수 옵션-->
-            <section class="buy_option_section">
-                <div class="sell_two_group">
-                    <div class="sell_option_div">
-                        <span>가격</span>
-                        <input type="number" id="buy_price">
-                    </div>
-                    <div class="sell_option_div">
-                        <span>개수</span>
-                        <input type="number" id="buy_much">
-                    </div>
+            <!--왼쪽 슬립리스트-->
+            <section class="sleep_list_section">
+                <!--추가버튼-->
+                <div class="sleep_list_plus">
+                    <i class="fas fa-plus-square"></i>
+                    <span>추가</span>
                 </div>
-                <div class="sell_two_group">
-                    <div class="sell_option_div">
-                        <span>StopLoss</span>
-                        <input type="number" id="buy_stoploss">
-                        <span>%</span>
-                    </div>
-                    <div class="sell_option_div">
-                        <span>마진</span>
-                        <input type="number" id="buy_margin">
-                        <span>%</span>
-                    </div>
+                <!--sleep목록-->
+                <div class="sleep_list_content">
+                    목록
+                </div>
+                <div class="sleep_list_content_selected">
+                    목록2
+                </div>
+                <div class="sleep_list_content">
+                    목록3
+                </div>
+                <div class="sleep_list_content">
+                    목록4
+                </div>
+                <div class="sleep_list_content">
+                    목록5
                 </div>
             </section>
 
+            <!--오른쪽 슬립옵션 정하기-->
+            <section class="option_list_section">
 
-            <!--매도 옵션-->
-            <section class="sell_section">
-                <span>매도</span>
-                <input type="checkbox" class="only_check" value="only_sell">매도만
             </section>
 
-            <!--매도 옵션-->
-            <section class="sell_option_section">
-                <div class="sell_two_group">
-                    <div class="sell_option_div">
-                        <span>가격</span>
-                        <input type="number" id="price">
-                    </div>
-                    <div class="sell_option_div">
-                        <span>개수</span>
-                        <input type="number" id="much">
-                    </div>
-                </div>
-                <div class="sell_two_group">
-                    <div class="sell_option_div">
-                        <span>Trailing Stop</span>
-                        <input type="number" id="trailing stop">
-                        <span>%</span>
-                    </div>
-                    <div class="sell_option_div">
-                        <span>마진</span>
-                        <input type="number" id="margin">
-                        <span>%</span>
-                    </div>
-                </div>
-                <div class="sell_two_group">
-                    <div class="sell_option_div">
-                        <span>Stop Loss</span>
-                        <input type="number" id="stoploss">
-                        <span>%</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="choose_section">
-                <input type="checkbox" class="only_check" value="real">실거래
-                <input type="checkbox" class="only_check" value="alarm">알림받기
-                <button>SLEEP 생성</button>
-            </section>
-
-        </section>
-
+         </section>
     </section>
 
 
