@@ -132,6 +132,10 @@ input:-webkit-autofill:active {
     line-height: 25px;
 }
 
+form{
+    order: 2;
+}
+
 .account_section{
     background:#4b515f;
     width: 98%;
@@ -208,7 +212,7 @@ input:-webkit-autofill:active {
 .sleep_list_content{
     padding: 2%;
 }
-.sleep_list_content_selected{
+.selected{
     padding: 2%;
     background: #2c3e50;
 }
@@ -216,11 +220,112 @@ input:-webkit-autofill:active {
     order: 2;
     width: 100%;
     background: #2c3e50;
+    display: flex;
+    flex-flow: column;
 }
 
+.coin_select_section{
+    display: flex;
+    flex-flow: row;
+    width: 96%;
+    margin: 2%;
+}
+.coin_select_section select{
+    margin-left: 5%;
+}
 
+.buy_section, .sell_section{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 96%;
+    margin: 2%;
+    margin-bottom: 0;
+}
 
+.buy_section input, .sell_section input{
+    margin-left:5%;
+}
+.title{
+    color:#00aecf;
+    font-weight: bolder;
+    font-size:1.100em;
+    font-size:1.100rem;
+}
+.only_check_span{
+    font-size:0.800em;
+    font-size:0.800rem;
+    font-weight: lighter;
+    margin-left: 0.3%;
+}
 
+.buy_option_section, .sell_option_section{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 96%;
+    margin: 2%;
+    background: rgba(255,255,255,0.1);
+}
+
+.buy_option_div, .sell_option_div{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 100%;
+    padding: 2%;
+    font-weight: lighter;
+}
+
+.buy_option_div span, .sell_option_div span{
+    width: 40%;
+    font-size:0.900em;
+    font-size:0.900rem;
+}
+
+.buy_option_input, .sell_option_input{
+    border: 0;
+    background: rgba(255,255,255,0.1);
+    margin-left: 2%;
+    color:white;
+    font-weight: lighter;
+    min-height: 25px;
+    width: 50%;
+}
+
+.choose_section{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 96%;
+    margin: 2%;
+    font-size:0.800em;
+    font-size:0.800rem;
+    font-weight: lighter;
+}
+
+.choose_section input{
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+.choose_section button{
+    margin-left: 5%;
+    padding: 2%;
+    background: #2d333d;
+    color: #00aecf;
+    border: 0;
+}
+
+.trailing_input{
+    border: 0;
+    background: rgba(255,255,255,0.1);
+    margin-left: 2%;
+    color:white;
+    font-weight: lighter;
+    min-height: 25px;
+    width: 24%;
+}
 
 
 /*메뉴바*/
@@ -380,6 +485,10 @@ input:-webkit-autofill:active {
     }
     .option_list_section{
         width: calc(100% - 16%);
+    }
+
+    .buy_option_div, .sell_option_div{
+        width: 46%;
     }
 
 
