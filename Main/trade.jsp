@@ -48,7 +48,7 @@
             <div class="select_title">거래</div>
         </section>
 
-        <form action="tradeProcess" method="POST">
+        <form action="tradeProcess" method="POST" onsubmit="return checkForm();" name="trade_form">
             <!--계정선택-->
             <section class="account_section">
                 <select name="market" class="market_list">
@@ -88,7 +88,7 @@
                     </c:forEach>
                 </select>
                 <input type="text" name="apiKey" id="apikey" placeholder="APIKEY" />
-                <input type="text" name="scrKey" id="secretkey" placeholder="SECRETKEY" />
+                <input type="password" name="scrKey" id="secretkey" placeholder="SECRETKEY" />
             </section>
 
 
@@ -133,7 +133,7 @@
                 <!--매수-->
                 <section class="buy_section">
                     <span class="title">매수</span>
-                    <input type="checkbox" class="only_check" name="only_buy" value="only_buy">
+                    <input type="checkbox" class="only_check" name="only_buy" value="only_buy" id="only_buy">
                     <span class="only_check_span">매수만</span>
                 </section>
 
@@ -141,27 +141,31 @@
                 <section class="buy_option_section">
                         <div class="buy_option_div">
                             <span>가격</span>
-                            <input class="buy_option_input" type="number" name="form_buy_price" id="buy_price">
+                            <input class="buy_option_input" type="text" name="form_buy_price" id="buy_price"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
                         </div>
                         <div class="buy_option_div">
                             <span>코인 개수</span>
-                            <input class="buy_option_input" type="number" name="form_buy_amount" id="buy_much">
+                            <input class="buy_option_input" type="text" name="form_buy_amount" id="buy_much"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
                         </div>
                         <div class="buy_option_div">
                             <span>StopLoss(%)</span>
-                            <input class="buy_option_input" type="number" name="form_buy_stoploss" id="buy_stoploss">
-                        </div>
-                        <div class="buy_option_div">
-                            <span>TrailingStart(%)</span>
-                            <input class="trailing_input" type="number" name="form_buy_trailingstop" id="buy_trailing_1">
-                            <input class="trailing_input" type="number" name="form_buy_trailingstop" id="buy_trailing_2">
+                            <input class="buy_option_input" type="text" name="form_buy_stoploss" id="buy_stoploss"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
                         </div>
                 </section>
 
                 <!--매도 옵션-->
                 <section class="sell_section">
                     <span class="title">매도</span>
-                    <input type="checkbox" class="only_check" name="only_sell" value="only_sell">
+                    <input type="checkbox" class="only_check" name="only_sell" value="only_sell" id="only_sell">
                     <span class="only_check_span">매도만</span>
                 </section>
 
@@ -169,29 +173,41 @@
                 <section class="sell_option_section">
                         <div class="sell_option_div">
                             <span>가격</span>
-                            <input class="sell_option_input" type="number" name="form_sell_price" id="price">
+                            <input class="sell_option_input" type="text" name="form_sell_price" id="sell_price"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
                         </div>
                         <div class="sell_option_div">
                             <span>코인 개수</span>
-                            <input class="sell_option_input" type="number" name="form_sell_amount" id="much">
+                            <input class="sell_option_input" type="text" name="form_sell_amount" id="sell_much"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
                         </div>
                         <div class="sell_option_div">
                             <span>TrailingStop(%)</span>
-                            <input class="trailing_input" type="number" name="form_sell_trailingstop" id="trailing stop_1">
-                            <input class="trailing_input" type="number" name="form_sell_trailingstop" id="trailing stop_2">
+                            <input class="trailing_input" type="text" name="form_sell_trailingstop" id="trailing_stop_1"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
+                            <input class="trailing_input" type="text" name="form_sell_trailingstop" id="trailing_stop_2"
+                                   onkeypress="return isNumberKey(event)"
+                                   onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');"
+                                   onpaste="javascript:return false;">
                         </div>
                 </section>
 
-                <section class="choose_section">
-                    <input type="radio" name="first" class="only_check" value="0">매수 먼저
-                    <input type="radio" name="first" class="only_check" value="1">매도 먼저
-                </section>
+                <div class="choose_section" id="buy_sell_choose_section">
+                    <input type="radio" name="first" class="only_check" value="0" checked="checked" >매수 먼저
+                    <input type="radio" name="first" class="only_check" value="1" >매도 먼저
+                </div>
 
                 <section class="choose_section">
                     <input type="checkbox" class="only_check" name="formreal" value="1">실거래
                     <input type="checkbox" class="only_check" name="formalarm" value="1">알림받기
                     <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
-                    <button>SLEEP 생성</button>
+                    <button id="sleep_make">SLEEP 생성</button>
                     <button>SLEEP 취소</button>
                 </section>
 
@@ -255,7 +271,6 @@
             },
         });
 
-
     });
 
 </script>
@@ -281,8 +296,140 @@
 
             },
         });
-
-
     });
 </script>
+
+<script>
+    //buy
+    $('#only_buy').on("change",function(){
+        if($('#only_buy').prop('checked')){
+            $('#buy_sell_choose_section').hide();
+            $('.sell_section').hide();
+            $('.sell_option_section').hide();
+        }
+        else{
+            $('#buy_sell_choose_section').show();
+            $('.sell_section').show();
+            $('.sell_option_section').show();
+        }
+    });
+    //sell
+    $('#only_sell').on("change",function(){
+        if($('#only_sell').prop('checked')){
+            $('#buy_sell_choose_section').hide();
+            $('.buy_section').hide();
+            $('.buy_option_section').hide();
+        }
+        else{
+            $('#buy_sell_choose_section').show();
+            $('.buy_section').show();
+            $('.buy_option_section').show();
+        }
+    });
+
+    function checkForm() {
+
+        if($('#only_buy').prop('checked')) {
+            var buy_price = $("#buy_price").val();
+            if (buy_price == '') {
+                window.alert("가격을 입력하세요.");
+                document.trade_form.form_buy_price.focus();
+                return false;
+            }
+            var buy_much = $("#buy_much").val();
+            if (buy_much == '') {
+                window.alert("개수를 입력하세요.");
+                document.trade_form.form_buy_amount.focus();
+                return false;
+            }
+        }
+
+        else if($('#only_sell').prop('checked')) {
+            var sell_price = $("#sell_price").val();
+            if (sell_price == '') {
+                window.alert("가격을 입력하세요.");
+                document.trade_form.form_sell_price.focus();
+                return false;
+            }
+            var sell_much = $("#sell_much").val();
+            if (sell_much == '') {
+                window.alert("개수를 입력하세요.");
+                document.trade_form.form_sell_amount.focus();
+                return false;
+            }
+            var stop_1 = $("#trailing_stop_1").val();
+            var stop_2 = $("#trailing_stop_2").val();
+            if(stop_1!='' || stop_2!=''){
+                if(stop_1=='' || stop_2==''){
+                    window.alert("trailing stop을 입력하세요.");
+                    return false;
+                }
+            }
+        }
+
+        else {
+            var buy_price = $("#buy_price").val();
+            var buy_much = $("#buy_much").val();
+            var sell_price = $("#sell_price").val();
+            var sell_much = $("#sell_much").val();
+
+            if (buy_price == '') {
+                window.alert("매수 가격을 입력하세요.");
+                document.trade_form.form_buy_price.focus();
+                return false;
+            }
+            if (buy_much == '') {
+                window.alert("매도 개수를 입력하세요.");
+                document.trade_form.form_buy_amount.focus();
+                return false;
+            }
+            if (sell_price == '') {
+                window.alert("매도 가격을 입력하세요.");
+                document.trade_form.form_sell_price.focus();
+                return false;
+            }
+            if (sell_much == '') {
+                window.alert("매도 개수를 입력하세요.");
+                document.trade_form.form_sell_amount.focus();
+                return false;
+            }
+
+            var stop_1 = $("#trailing_stop_1").val();
+            var stop_2 = $("#trailing_stop_2").val();
+            if(stop_1!='' || stop_2!=''){
+                if(stop_1=='' || stop_2==''){
+                    window.alert("trailing stop을 입력하세요.");
+                    return false;
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+     return false;
+    // Textbox value
+    var _value = event.srcElement.value;
+    // 소수점(.)이 두번 이상 나오지 못하게
+    var _pattern0 = /^\d*[.]\d*$/; // 현재 value값에 소수점(.) 이 있으면 . 입력불가
+    if (_pattern0.test(_value)) {
+    if (charCode == 46) {
+     return false;
+    }
+}
+
+// 소수점 네번째자리까지만 입력가능
+var _pattern2 = /^\d*[.]\d{4}$/;
+    if (_pattern2.test(_value)) {
+        alert("소수점 네번째자리까지만 입력가능합니다.");
+        return false;
+    }
+    return true;
+}
+</script>
+
+
 </html>
